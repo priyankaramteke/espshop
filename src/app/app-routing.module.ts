@@ -3,8 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
-  {path:'', component:HeaderComponent},
-  {path:'header', component:HeaderComponent}
+  {path:'home', component:HeaderComponent},
+
+  
 ];
 
 @NgModule({

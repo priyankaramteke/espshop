@@ -1,0 +1,11 @@
+.form-inline{
+    border: 1px solid rgb(185, 183, 183);
+    display: flex;
+    padding: 9px;
+    border-radius: 14px;
+}
+input{
+    border: none;
+    /* text-align: center; */
+    padding-bottom: 2px;
+}

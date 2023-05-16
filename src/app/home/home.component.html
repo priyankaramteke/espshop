@@ -1,1 +1,21 @@
-<p>home works!</p>
+<!-- <p>home works!</p> -->
+
+<div class="container">
+    <div class="home-section">
+        <img src="../../assets/1 img.png">
+    </div>
+
+
+
+    <div class="mt-3 p-4">
+        <div class="row">
+            <h5>Product Shop in eshop</h5>
+            <div class="rowproduct">
+                <ng-container *ngFor="let t of product">
+                    <span>{{product.name}}</span>
+                    <img src="../../assets/babycare.png" class="rowing largeproduct" alt="">
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
