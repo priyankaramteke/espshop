@@ -6,7 +6,7 @@
             <div class="rowproduct">
                 <ng-container *ngFor="let t of productItem">
                     <!-- <span>{{t.name}}</span> -->
-                    <img [src]="t['img']" class="rowing largeproduct" alt="">
+                    <img [src]="t['img']" class="rowing largeproduct" alt="" (click)="gotoProductInfo(t)">
                 </ng-container>
             </div>
         </div>

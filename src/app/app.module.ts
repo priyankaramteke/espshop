@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { CardSectionComponent } from './card-section/card-section.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NgImageSliderModule } from 'ng-image-slider';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

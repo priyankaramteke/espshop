@@ -1,5 +1,20 @@
 <h4>Dairy, Bread & Eggs</h4>
-<div >
-    <ng-image-slider [images]="imgCollectionCard" #nav
-    [imageSize]="{width:'15%', height:250}"></ng-image-slider>
+<!-- <div>
+    <ng-image-slider [images]="imgCollectionCard" #nav [imageSize]="{width:'15%', height:250}"></ng-image-slider>
+</div> -->
+<div style="margin: 1rem;">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let slide of imgCollectionCard" class="slide">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" [src]="slide['image']" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </ngx-slick-carousel>
 </div>

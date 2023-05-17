@@ -90,4 +90,8 @@ export class ProductItemComponent {
       },
     ]
   }
+
+  gotoProductInfo(info: any) {
+    console.log(info)
+  }
 }

@@ -1,0 +1,13 @@
+.slick-prev:before,
+.slick-next:before {
+    color: #09529b !important;
+}
+
+.button.slick-prev.slick-arrow {
+    background-color: red !important;
+}
+
+.card-img-top{
+    height: 23vh;
+    object-fit: contain;
+}

@@ -1,4 +1,8 @@
-.rowproduct img{
-    width: 10%;
+.rowproduct img {
+    width : 10%;
     height: 30vh;
+}
+
+img:hover {
+    cursor: pointer;
 }
