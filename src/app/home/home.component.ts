@@ -34,12 +34,12 @@ export class HomeComponent {
     },
     {
       name:'babycare',
-      img:'https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=360/layout-engine/2023-03/pharmacy-WEB.jpg'
+      img:'https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=450/layout-engine/2023-03/babycare-WEB.jpg'
     },
 
     {
       name:'staples',
-      img:'https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=360/layout-engine/2023-03/pharmacy-WEB.jpg'
+      img:'https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=450/layout-engine/2023-03/staples-WEB.jpg'
     },
     {
       name:'pharmacy',
