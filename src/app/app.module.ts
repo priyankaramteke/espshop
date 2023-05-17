@@ -9,6 +9,7 @@ import { PagnotComponent } from './pagnot/pagnot.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { CardSectionComponent } from './card-section/card-section.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardSectionComponent } from './card-section/card-section.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
