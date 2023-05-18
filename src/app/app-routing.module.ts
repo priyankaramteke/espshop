@@ -9,8 +9,8 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path:'home', component:HeaderComponent},
-  {path:'home',component:HomeComponent},
+  // {path:'home', component:HeaderComponent},
+  {path:'',component:HomeComponent},
   {path:'card-section', component:CardSectionComponent},
   {path:'product-item',component:ProductItemComponent},
   {path:'product-info',component:ProductInfoComponent},
