@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-item',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ProductItemComponent {
   productItem: any = []
-  constructor() {
+  constructor(private router:Router ) {
 
   }
   ngOnInit() {
@@ -92,6 +93,7 @@ export class ProductItemComponent {
   }
 
   gotoProductInfo(info: any) {
+    this.router.navigate(['/product-info'])
     console.log(info)
   }
 }

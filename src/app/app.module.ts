@@ -11,6 +11,7 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { CardSectionComponent } from './card-section/card-section.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ProductInfoComponent } from './product-info/product-info.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     PagnotComponent,
     FooterComponent,
     ProductItemComponent,
-    CardSectionComponent
+    CardSectionComponent,
+    ProductInfoComponent
   ],
   imports: [
     BrowserModule,

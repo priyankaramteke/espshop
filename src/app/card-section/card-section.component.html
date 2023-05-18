@@ -1,20 +1,43 @@
-<h4>Dairy, Bread & Eggs</h4>
 <!-- <div>
     <ng-image-slider [images]="imgCollectionCard" #nav [imageSize]="{width:'15%', height:250}"></ng-image-slider>
 </div> -->
-<div style="margin: 1rem;">
-    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"
-        (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
-        <div ngxSlickItem *ngFor="let slide of imgCollectionCard" class="slide">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" [src]="slide['image']" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container">
+    <h4>Dairy, Bread & Eggs</h4>
+    <div style="margin: 1rem;">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of imgCollectionCard" class="slide">
+                <div class="card" style="width: 12rem;height: 45vh;">
+                    <img class="card-img-top" [src]="slide['image']" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">{{slide.name}}</h6>
+                        <p class="card-text">{{slide.kg}}</p>
+                        <div> <b>{{slide.rs}}</b> &nbsp; &nbsp;
+                            <a href="#" class="btn btn-success ml-9">ADD</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </ngx-slick-carousel>
+        </ngx-slick-carousel>
+    </div>
+    <h4>Cold Drinks & Juices </h4>
+    <div style="margin: 1rem;">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of Drinkssection" class="slide">
+                <div class="card" style="width: 13rem;height: 45vh;">
+                    <img class="card-img-top" [src]="slide['image']" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">{{slide.name}}</h6>
+                        <p class="card-text">{{slide.kg}}</p>
+                        <div> <b>{{slide.rs}}</b> &nbsp; &nbsp;
+                            <a href="#" class="btn btn-success">ADD</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ngx-slick-carousel>
+    </div>
 </div>

@@ -8,12 +8,10 @@
 }
 
 .card-img-top{
-    height: 23vh;
+    height: 20vh;
     object-fit: contain;
 }
 .images{
 width: 5%;
 }
-h3{
-    margin-left: 9%;
-}
+
