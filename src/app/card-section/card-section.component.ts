@@ -181,10 +181,10 @@ export class CardSectionComponent {
 
   slideConfig = {
     // centerMode: true,
-    centerPadding: '60px',
+    centerPadding: '6px',
     dots: true,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 3,
     arrows: true
   };

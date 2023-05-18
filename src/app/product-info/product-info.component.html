@@ -1,4 +1,4 @@
-<div class="container w-100">
+<div class="container w-100" style="margin-top: 5rem;">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid" style="margin-left:0;">
             <p class="navbar-header">
@@ -25,77 +25,41 @@
 <div class="container-fluid w-100">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar w-10">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview</a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Export</a></li>
-            </ul>
+            <ul class="list-group" *ngFor="let info of Drinkssection">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{info.name}}
+                  <span class="badge badge-primary badge-pill"><img [src]="info['image']"></span>
+                </li>
+                <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Dapibus ac facilisis in
+                  <span class="badge badge-primary badge-pill">2</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Morbi leo risus
+                  <span class="badge badge-primary badge-pill">1</span>
+                </li> -->
+              </ul>
+           
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main w-50 mx-5">
-            <h1 class="page-header">Dashboard</h1>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ">
+            <h3 class="page-header">Buy Drinks & juices online</h3>
             <div class="row">
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" *ngFor="let info of Drinkssection"> -->
+                <div class="col" *ngFor="let info of Drinkssection">
+                    <div class="card" style="width: 14rem; margin-top: 1rem;">
+                        <img [src]="info['image']" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h6 class="card-title">{{info.name}}</h6>
+                            <p class="card-text">{{info.kg}}</p>
+                            <div> <b>{{info.rs}}</b> &nbsp; &nbsp;
+                                <a href="#" class="btn btn-success">ADD</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>
-   
+  </div>
+  

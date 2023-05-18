@@ -7,11 +7,11 @@
     background-color: red !important;
 }
 
-.card-img-top{
-    height: 20vh;
+.card-img-top {
+    height    : 20vh;
     object-fit: contain;
 }
-.images{
-width: 5%;
-}
 
+.images {
+    width: 5%;
+}
