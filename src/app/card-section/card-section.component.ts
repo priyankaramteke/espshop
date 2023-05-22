@@ -199,14 +199,14 @@ export class CardSectionComponent {
 
   slickInit(e: any) {
     console.log('slick initialized', e);
-    return e.slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      autoplay: true,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    })
+    // return e.slick({
+    //   dots: true,
+    //   infinite: true,
+    //   speed: 500,
+    //   autoplay: true,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1
+    // })
   }
 
   breakpoint(e: any) {

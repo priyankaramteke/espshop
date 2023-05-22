@@ -11,15 +11,15 @@ import { BodySectonComponent } from './body-secton/body-secton.component';
 
 const routes: Routes = [
   // {path:'home', component:HeaderComponent},
-  {path:'',component:HomeComponent},
-  {path:'card-section', component:CardSectionComponent},
-  {path:'product-item',component:ProductItemComponent},
-  {path:'product-info',component:ProductInfoComponent},
-  {path:'body-secton',component:BodySectonComponent},
-  {path:'footer', component:FooterComponent},
-  {path:'**', component:PagnotComponent}
+  { path: '', component: HomeComponent },
+  { path: 'card-section', component: CardSectionComponent },
+  { path: 'product-item', component: ProductItemComponent },
+  { path: 'product-info', component: ProductInfoComponent },
+  { path: 'body-secton', component: BodySectonComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: '**', component: PagnotComponent }
 
-  
+
 ];
 
 @NgModule({
