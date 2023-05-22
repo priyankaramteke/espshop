@@ -14,4 +14,7 @@ export class HeaderComponent {
   gotoHome() {
     this.router.navigate([''])
   }
+  gotomycart(){
+    this.router.navigate(['mycart'])
+    }
 }

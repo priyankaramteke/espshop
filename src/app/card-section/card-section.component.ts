@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-card-section',
   templateUrl: './card-section.component.html',
@@ -65,28 +66,28 @@ export class CardSectionComponent {
 
       },
       {
-        image: 'assets/imgcardsection/1card.png',
+        image: 'assets/imgcardsection/8card.png',
         name: 'Amul Cheese Cubes',
         kg: '200g',
         rs: '127 Rs'
 
       },
       {
-        image: 'assets/imgcardsection/1card.png',
+        image: 'assets/imgcardsection/9card.png',
         name: 'Amul Cheese Cubes',
         kg: '200g',
         rs: '127 Rs'
 
       },
       {
-        image: 'assets/imgcardsection/1card.png',
+        image: 'assets/imgcardsection/10card.png',
         name: 'Amul Cheese Cubes',
         kg: '200g',
         rs: '127 Rs'
 
       },
       {
-        image: 'assets/imgcardsection/1card.png',
+        image: 'assets/imgcardsection/11card.png',
         name: 'Amul Cheese Cubes',
         kg: '200g',
         rs: '127 Rs'
@@ -184,7 +185,7 @@ export class CardSectionComponent {
     centerPadding: '6px',
     dots: true,
     infinite: true,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 3,
     arrows: true
   };
@@ -219,5 +220,8 @@ export class CardSectionComponent {
 
   beforeChange(e: any) {
     console.log('beforeChange');
+  }
+  addCart(category:any){
+    console.log(category)
   }
 }

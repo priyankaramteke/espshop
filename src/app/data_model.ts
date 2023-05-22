@@ -1,15 +1,21 @@
 export const Data = [
+
     {
+        
         id: '1',
         name: 'dairy,Bread & Eggs',
         img: 'assets/images/Slice-2_10.png',
         subcat: [
+            
             {
+
                 id: '1',
                 name: 'Milk',
                 img: 'assets/milkimg/Buy Milk Online/176a.jpg',
                 data: [
                     {
+                        headings:'Buy Drinks & juices online',
+
                         id: '1',
                         name: 'Amul Taaza',
                         img: 'assets/milkimg/Buy Milk Online/176a.jpg',
@@ -110,7 +116,7 @@ export const Data = [
             },
             {
                 id: '2',
-                name: 'Bread & pav',
+                name: 'Bread&pav',
                 img: 'assets/bread/114234a.jpg',
                 data: [
                     {
@@ -205,7 +211,7 @@ export const Data = [
             },
             {
                 id: '3',
-                name: 'Bread & pav',
+                name: 'Bread&pav',
                 img: 'assets/bread/114234a.jpg',
                 data: [
                     {

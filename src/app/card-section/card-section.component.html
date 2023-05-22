@@ -3,7 +3,7 @@
 </div> -->
 <div class="container">
     <h4>Dairy, Bread & Eggs</h4>
-    <div style="margin: 1rem;">
+    <div style="margin: 2rem;">
         <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
             (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
             (beforeChange)="beforeChange($event)">
@@ -14,7 +14,7 @@
                         <h6 class="card-title">{{slide.name}}</h6>
                         <p class="card-text">{{slide.kg}}</p>
                         <div> <b>{{slide.rs}}</b> &nbsp; &nbsp;
-                            <a href="#" class="btn btn-success ml-9">ADD</a>
+                            <a  class="btn btn-success ml-9">ADD</a>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <h6 class="card-title">{{slide.name}}</h6>
                         <p class="card-text">{{slide.kg}}</p>
                         <div> <b>{{slide.rs}}</b> &nbsp; &nbsp;
-                            <a href="#" class="btn btn-success">ADD</a>
+                            <a  class="btn btn-success">ADD</a>
                         </div>
                     </div>
                 </div>

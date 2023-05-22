@@ -8,6 +8,7 @@ import { CardSectionComponent } from './card-section/card-section.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { HomeComponent } from './home/home.component';
 import { BodySectonComponent } from './body-secton/body-secton.component';
+import { MycartComponent } from './mycart/mycart.component';
 
 const routes: Routes = [
   // {path:'home', component:HeaderComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'product-item', component: ProductItemComponent },
   { path: 'product-info', component: ProductInfoComponent },
   { path: 'body-secton', component: BodySectonComponent },
+  {path:'mycart', component:MycartComponent},
   { path: 'footer', component: FooterComponent },
   { path: '**', component: PagnotComponent }
 

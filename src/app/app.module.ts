@@ -13,6 +13,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { BodySectonComponent } from './body-secton/body-secton.component';
+import { MycartComponent } from './mycart/mycart.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BodySectonComponent } from './body-secton/body-secton.component';
     ProductItemComponent,
     CardSectionComponent,
     ProductInfoComponent,
-    BodySectonComponent
+    BodySectonComponent,
+    MycartComponent
   ],
   imports: [
     BrowserModule,

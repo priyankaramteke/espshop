@@ -25,8 +25,12 @@
     display        : flex;
     align-items    : center;
     justify-content: space-between;
-    height         : 52vh;
-
+    height         : 48vh;
+    /* margin-top: 5%; */
+}
+.card-img-top {
+    height    : 20vh;
+    object-fit: contain;
 }
 
 .list-group {
@@ -35,7 +39,7 @@
 
 
 .image-section {
-    height        : 90px;
+    height        : 80px;
     mix-blend-mode: multiply;
 }
 
