@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-section.component.css']
 })
 export class CardSectionComponent {
-  imgCollectionCard: any = []
-  Drinkssection:any=[]
+  imgCollectionCard: any = [];
+  Drinkssection:any=[];
+  quantity = 0;
   slides = [{ img: '' }]
   constructor() {
 
@@ -211,17 +212,32 @@ export class CardSectionComponent {
   }
 
   breakpoint(e: any) {
-    console.log('breakpoint');
+    // console.log('breakpoint');
   }
 
   afterChange(e: any) {
-    console.log('afterChange');
+    // console.log('afterChange');
   }
 
   beforeChange(e: any) {
-    console.log('beforeChange');
+    // console.log('beforeChange');
   }
   addCart(category:any){
-    console.log(category)
+    // console.log(category)
+  }
+  subtraprod(i:any){
+   console.log(i)
+   if(this.imgCollectionCard[i]['cartCount'] > 0){
+    this.imgCollectionCard[i]['cartCount'] = this.imgCollectionCard[i]['cartCount'] - 1;
+   }
+  }
+
+  addprod(i: number){
+    // console.log(i)
+    this.imgCollectionCard[i]['cartCount'] = this.imgCollectionCard[i]['cartCount'] + 1;
   }
 }
+// addpro(i: number) {
+//   this.productList['subcat'][0]['data'][i]['cartCount'] = this.productList['subcat'][0]['data'][i]['cartCount'] + 1;
+
+// }

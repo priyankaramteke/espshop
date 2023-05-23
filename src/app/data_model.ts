@@ -14,7 +14,7 @@ export const Data = [
                 img: 'assets/milkimg/Buy Milk Online/176a.jpg',
                 data: [
                     {
-                        // headings:'Buy Drinks & juices online',
+                        headings:'Buy Drinks & juices online',
 
                         id: '1',
                         name: 'Amul Taaza',

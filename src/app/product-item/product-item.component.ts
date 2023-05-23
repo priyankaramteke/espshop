@@ -98,7 +98,7 @@ export class ProductItemComponent {
   }
 
   gotoProductInfo(info: any) {
-    console.log(info)
+    // console.log(info)
     this.productService.setSelectedProduct(info)
     this.router.navigate(['/product-info'], { queryParams: { id: info['id'] } })
     // console.log(info)
