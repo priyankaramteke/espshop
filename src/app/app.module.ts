@@ -14,6 +14,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { BodySectonComponent } from './body-secton/body-secton.component';
 import { MycartComponent } from './mycart/mycart.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { MycartComponent } from './mycart/mycart.component';
     BrowserModule,
     AppRoutingModule,
     NgImageSliderModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    BrowserAnimationsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

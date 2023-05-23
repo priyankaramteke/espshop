@@ -14,6 +14,7 @@ export class ProductInfoComponent {
   breadEggssection: any = [];
   productList: any = [];
   selectId: any;
+  quantity = 0;
   constructor(private route: ActivatedRoute, private productService: ProductService) {
 
   }
@@ -27,7 +28,8 @@ export class ProductInfoComponent {
 
     this.productList = Data.find(r => r['id'] === this.selectId)
 
-    
+    console.log(this.productList)
+
     // this.Drinkssection = [
     //   {
     //     image: 'assets/drinksimgsection/2red.png',
@@ -304,8 +306,25 @@ export class ProductInfoComponent {
 
 
     // ]
+  }
+  subtracpro(i: any) {
+
+    console.log(i)
+    if (this.productList['subcat'][0]['data'][i]['cartCount'] > 0) {
+      this.productList['subcat'][0]['data'][i]['cartCount'] = this.productList['subcat'][0]['data'][i]['cartCount'] - 1
+    }
+
+    // console.log(info)
+    // if (info.qnt != 1) {
+    //   info.qnt -= 1;
+    // }
+  }
+  addpro(i: number) {
+    this.productList['subcat'][0]['data'][i]['cartCount'] = this.productList['subcat'][0]['data'][i]['cartCount'] + 1;
 
   }
+
+
 }
 
 
