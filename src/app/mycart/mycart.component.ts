@@ -9,4 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 export class MycartComponent {
 
   constructor(private router:ActivatedRoute){}
+
+  // ClickMe(){
+  //   console.log("ehhh")
+  //   this.Doublec();
+  // }
+
+  // Doublec(){
+  //   console.log("Dudsfsfs")
+  // }
 }
