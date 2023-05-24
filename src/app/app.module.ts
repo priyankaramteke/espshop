@@ -16,6 +16,7 @@ import { BodySectonComponent } from './body-secton/body-secton.component';
 import { MycartComponent } from './mycart/mycart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from './product.service';
 import { FilterPipe } from './filter.pipe';
@@ -41,6 +42,7 @@ import { FilterPipe } from './filter.pipe';
     SlickCarouselModule,
     BrowserAnimationsModule,
     MatSidenavModule,
+    MatMenuModule,
     FormsModule
   ],
   providers: [ProductService],

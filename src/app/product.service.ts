@@ -6,6 +6,8 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 export class ProductService {
   selectedProduct: any;
+  mycartproduct = new Subject<string>();
+
   constructor() { }
 
 
@@ -16,6 +18,5 @@ export class ProductService {
   setSelectedProduct(info: any) {
     this.selectedProduct = info;
   }
-  mycartproduct = new Subject<any>()
   // mycartproduct = new BehaviorSubject('')
 }
