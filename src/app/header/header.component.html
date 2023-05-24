@@ -13,8 +13,9 @@
 
             <form class="form-inline mx-5 my-lg-0 w-50">
                 <div class="search-icon w-100">
-                    <!-- <fieldset> <i class="bi bi-search"></i></fieldset>  -->
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <!-- <i class="bi bi-search"></i>  -->
+                    <input class="form-control mr-sm-2" [(ngModel)]="nameSearch" name="search" type="search"
+                     placeholder="Search" >
                 </div>
             </form>
         </div>
@@ -23,7 +24,8 @@
                 Login
             </button>
 
-            <button type="button" class="btn btn-success p-2" (click)="gotomycart()" style="font-weight: 600;"><i class="bi bi-cart"></i>&nbsp;
+            <button type="button" class="btn btn-success p-2" (click)="gotomycart()" style="font-weight: 600;"><i
+                    class="bi bi-cart"></i>&nbsp;
                 My Cart</button>
 
         </div>

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,4 +16,6 @@ export class ProductService {
   setSelectedProduct(info: any) {
     this.selectedProduct = info;
   }
+  mycartproduct = new Subject<any>()
+  // mycartproduct = new BehaviorSubject('')
 }

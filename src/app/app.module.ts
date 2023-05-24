@@ -16,6 +16,9 @@ import { BodySectonComponent } from './body-secton/body-secton.component';
 import { MycartComponent } from './mycart/mycart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { FormsModule } from '@angular/forms';
+import { ProductService } from './product.service';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     CardSectionComponent,
     ProductInfoComponent,
     BodySectonComponent,
-    MycartComponent
+    MycartComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -36,9 +40,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     NgImageSliderModule,
     SlickCarouselModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

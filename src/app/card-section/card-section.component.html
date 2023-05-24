@@ -14,15 +14,11 @@
                         <p class="card-text">{{slide.kg}}</p>
                         <b>{{slide.rs}}</b> &nbsp; &nbsp;
                         <div class="btn btn-success">
-                            <span (click)="subtraprod(i)" *ngIf="slide?.cartCount>0"><i class="bi bi-dash-circle">
+                            <span (click)="subtraprod(i)" *ngIf="slide?.cartCount>0"><i class="bi bi-dash-lg">
                                 </i></span><span *ngIf="slide?.cartCount ===0" (click)="addprod(i)">Add</span>
                               <span *ngIf="slide?.cartCount">{{slide?.cartCount}}</span>  <span *ngIf="slide?.cartCount>0" 
-                                (click)="addprod(i)"><i class="bi bi-plus-circle"></i></span>
-                            <!-- <span (click)="subtraprod(i)" *ngIf="slide?.cartCount>0"><i class="bi bi-dash-circle"></i></span>
-                            <span (click)="addprod(i)">Add</span>
-                            <span *ngIf="slide?.cartCount">{{slide?.cartCount}}</span>
-                            <span *ngIf="slide?.cartCount>0" (click)="addprod(i)"><i
-                                    class="bi bi-plus-circle"></i></span> -->
+                                (click)="addprod(i)"><i class="bi bi-plus-lg"></i></span>
+                            
                         </div>
                     </div>
                 </div>
@@ -34,7 +30,7 @@
     <div style="margin: 1rem;">
         <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
             (init)="slickInit($event)">
-            <div ngxSlickItem *ngFor="let slide of Drinkssection" class="slide">
+            <div ngxSlickItem *ngFor="let slide of Drinkssection; let i=index" class="slide">
                 <div class="card" style="width: 12rem;height: 45vh;">
                     <img class="card-img-top" [src]="slide['image']" alt="Card image cap">
                     <div class="card-body">
@@ -43,8 +39,11 @@
                         <div>
                             <b>{{slide.rs}}</b> &nbsp; &nbsp;
                             <div class="btn btn-success">
-                                <span ><i class="bi bi-dash-circle"></i><span></span>ADD<span></span><i
-                                        class="bi bi-plus-circle"></i></span>
+                                <span (click)="subtraproducttwo(i)" *ngIf="slide?.cartCount>0"><i class="bi bi-dash-lg"></i>
+                                    </span><span *ngIf="slide?.cartCount ===0" (click)="addproducttwo(i)">Add</span>&nbsp;
+                                  <span *ngIf="slide?.cartCount">{{slide?.cartCount}}</span> &nbsp; <span *ngIf="slide?.cartCount>0" 
+                                    (click)="addproducttwo(i)"><i class="bi bi-plus-lg"></i></span>
+                                
                             </div>
                         </div>
                     </div>

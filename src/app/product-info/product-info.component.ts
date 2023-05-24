@@ -16,7 +16,10 @@ export class ProductInfoComponent {
   selectId: any;
   quantity = 0;
   constructor(private route: ActivatedRoute, private productService: ProductService) {
-
+    this.productService.mycartproduct.subscribe((cartpro:any) =>{
+      console.log(cartpro)
+      this.mycartprod = cartpro
+    })
   }
 
   ngOnInit() {
@@ -320,10 +323,15 @@ export class ProductInfoComponent {
     // }
   }
   addpro(i: number) {
-    this.productList['subcat'][0]['data'][i]['cartCount'] = this.productList['subcat'][0]['data'][i]['cartCount'] + 1;
-
+    const cartpro:any = this.productList['subcat'][0]['data'][i]['cartCount'] = this.productList['subcat'][0]['data'][i]['cartCount'] + 1;
+    this.productService.mycartproduct.next(cartpro)
   }
-
+ mycartprod(cartpro:any){
+  console.log(cartpro);
+  
+  // this.mycartproduct = cartpro.value
+  // this.productService.mycartproduct.next(cartpro)
+ }
 
 }
 

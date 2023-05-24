@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  nameSearch:string='';
   constructor(private router: Router) {
 
   }
@@ -17,4 +17,6 @@ export class HeaderComponent {
   gotomycart(){
     this.router.navigate(['mycart'])
     }
+
+
 }

@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class CardSectionComponent {
   imgCollectionCard: any = [];
   Drinkssection: any = [];
+  nameSearch:string='';
   quantity = 0;
   slides = [{ img: '' }]
   constructor() {
@@ -25,10 +26,10 @@ export class CardSectionComponent {
      
 
     
-    // this.Drinkssection = this.Drinkssection.map((r: any) => {
-    //   r['cartCount'] = 0;
-    //   return r;
-    // })
+    this.Drinkssection = this.Drinkssection.map((r: any) => {
+      r['cartCount'] = 0;
+      return r;
+    })
 
 
 
@@ -71,8 +72,13 @@ export class CardSectionComponent {
     // console.log(i)
     this.imgCollectionCard[i]['cartCount'] = this.imgCollectionCard[i]['cartCount'] + 1;
   }
+  subtraproducttwo(i:any){
+    console.log(i)
+    if (this.Drinkssection[i]['cartCount'] > 0) {
+      this.Drinkssection[i]['cartCount'] = this.Drinkssection[i]['cartCount'] - 1;
+    }
+  }
+  addproducttwo(i:number){
+this.Drinkssection[i]['cartCount'] =this.Drinkssection[i]['cartCount'] + 1
+  }
 }
-// addpro(i: number) {
-//   this.productList['subcat'][0]['data'][i]['cartCount'] = this.productList['subcat'][0]['data'][i]['cartCount'] + 1;
-
-// }
