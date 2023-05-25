@@ -325,9 +325,9 @@ export class ProductInfoComponent {
   addpro(i: number) {
     console.log(i)
     let cartpro = this.productList['subcat'][0]['data'][i]['cartCount'] = this.productList['subcat'][0]['data'][i]['cartCount'] + 1;
-console.log(this.productList.data)
+    console.log(this.productList['subcat'][0]['data'])
 
-    this.productService.mycartproduct.next(cartpro)
+    this.productService.mycartproduct.next(this.productList['subcat'][0]['data'])
   }
   mycartprod(cartpro: any) {
     console.log(cartpro);

@@ -16,7 +16,7 @@ export class MycartComponent {
 
   ngOnInit() {
     this.productService.mycartproduct.subscribe((cartpro: any) => {
-      console.log('ghgffh', cartpro)
+      console.log('abcd', cartpro)
       this.cartCountItem = cartpro;
     })
   }

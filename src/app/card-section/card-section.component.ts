@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,11 +13,9 @@ export class CardSectionComponent {
   nameSearch:string='';
   quantity = 0;
   slides = [{ img: '' }]
-  constructor() {
-
-  }
+  constructor(private router:Router) {}
+  
   ngOnInit() {
-
     this.imgCollectionCard = [{ "image": "assets/imgcardsection/1card.png", "name": "Amul Cheese Cubes", "kg": "200g", "rs": "127 Rs", "cartCount": 0 }, { "image": "assets/imgcardsection/2card.png", "name": "Nestle Milkmaid Sweetened Condensed..", "kg": "380g", "rs": "138 Rs", "cartCount": 0 }, { "image": "assets/imgcardsection/3card.png", "name": "Amul Taaza Toned Fresh Milk", "kg": "500ml", "rs": "27 Rs", "cartCount": 0 }, { "image": "assets/imgcardsection/4card.png", "name": "Britannia 100% Whole Wheat Breads", "kg": "400g", "rs": "50 Rs", "cartCount": 0 }, { "image": "assets/imgcardsection/5card.png", "name": "Amul Cheese Cubes", "kg": "200g", "rs": "91 Rs", "cartCount": 0 }, { "image": "assets/imgcardsection/6card.png", "name": "Amul Fresh Malai Paneer", "kg": "200g", "rs": "127 Rs", "cartCount": 0 }, { "image": "assets/imgcardsection/7card.png", "name": "Amul Salted Butter", "kg": "100g", "rs": "56 Rs", "cartCount": 0 }, { "image": "assets/imgcardsection/8card.png", "name": "Amul Cheese Cubes", "kg": "200g", "rs": "127 Rs", "cartCount": 0 }, { "image": "assets/imgcardsection/9card.png", "name": "Amul Cheese Cubes", "kg": "200g", "rs": "127 Rs", "cartCount": 0 }, { "image": "assets/imgcardsection/10card.png", "name": "Amul Cheese Cubes", "kg": "200g", "rs": "127 Rs", "cartCount": 0 }, { "image": "assets/imgcardsection/11card.png", "name": "Amul Cheese Cubes", "kg": "200g", "rs": "127 Rs", "cartCount": 0 }]
 
 
@@ -54,7 +53,9 @@ export class CardSectionComponent {
   }
 
   slickInit(e: any) {
-   
+  }
+  goprodetails(){
+    this.router.navigate(['prodetails'])
   }
 
  

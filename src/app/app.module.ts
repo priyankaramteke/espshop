@@ -20,6 +20,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from './product.service';
 import { FilterPipe } from './filter.pipe';
+import { ProdetailsComponent } from './prodetails/prodetails.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FilterPipe } from './filter.pipe';
     ProductInfoComponent,
     BodySectonComponent,
     MycartComponent,
-    FilterPipe
+    FilterPipe,
+    ProdetailsComponent
   ],
   imports: [
     BrowserModule,

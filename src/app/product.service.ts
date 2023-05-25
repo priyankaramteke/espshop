@@ -14,6 +14,13 @@ export class ProductService {
   getSelectedProduct() {
     return this.selectedProduct;
   }
+  getproductDetails(id: any){
+    for(let i = 0; i < this.selectedProduct.length; i++){
+      if(this.selectedProduct[i].id == id){
+        return this.selectedProduct[i]
+      }
+    }
+  }
 
   setSelectedProduct(info: any) {
     this.selectedProduct = info;

@@ -1,0 +1,22 @@
+<p>prodetails works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 order-md-2 order-sm-2 order-2">
+        <img class="d-block w-100 m-3" [src]="procardetai['image']" alt="Card image cap">
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 px-4 order-lg-2 order-md-1 order-sm-1 order-1">
+        <div class="paragrap" style=" margin-top: 20px;">
+            <div class="card-body">
+              <h3><b style="color: rgb(216, 65, 65); font-weight: 700;">{{procardetai.name}} </b></h3>
+              <p class="card-text">{{procardetai.kg}}</p>
+              <!-- <p>{{procardetai.rs}}</p> -->
+            <b>{{procardetai.price | currency:'rs'}}</b> &nbsp; &nbsp; &nbsp;
+       
+                    
+            <!-- <button>Details <i class="bi bi-eye-fill"></i></button> -->
+            <h2>Why shop from blinkit?</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
