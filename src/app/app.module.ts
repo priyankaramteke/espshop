@@ -18,10 +18,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatListModule} from '@angular/material/list';
+import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from './product.service';
 import { FilterPipe } from './filter.pipe';
 import { ProdetailsComponent } from './prodetails/prodetails.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { ProdetailsComponent } from './prodetails/prodetails.component';
     BodySectonComponent,
     MycartComponent,
     FilterPipe,
-    ProdetailsComponent
+    ProdetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { ProdetailsComponent } from './prodetails/prodetails.component';
     MatSidenavModule,
     MatMenuModule,
     MatListModule,
+    MatDialogModule,
     FormsModule
   ],
   providers: [ProductService],
