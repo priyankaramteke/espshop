@@ -2,19 +2,32 @@
 <div class="container">
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 order-md-2 order-sm-2 order-2">
-        <img class="d-block w-50 m-3" [src]="procardetai['image']" alt="Card image cap">
+        <img class="d-block w-100 h-60 m-3" [src]="procardetai['image']" alt="Card image cap">
       </div>
       <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 px-4 order-lg-2 order-md-1 order-sm-1 order-1">
         <div class="paragrap" style=" margin-top: 20px;">
             <div class="card-body">
-              <h3><b style="color: rgb(216, 65, 65); font-weight: 700;">{{procardetai.name}} </b></h3>
+              <h2><b style="color: rgb(216, 65, 65); font-weight: 700;">{{procardetai.name}} </b></h2>
               <p class="card-text">{{procardetai.kg}}</p>
-              <!-- <p>{{procardetai.rs}}</p> -->
-            <b>{{procardetai.price | currency:'rs'}}</b> &nbsp; &nbsp; &nbsp;
+              <p>{{procardetai.rs}}</p>
+            <b>{{procardetai.rs | currency:'INR'}}</b> &nbsp; &nbsp; &nbsp;
        
                     
             <!-- <button>Details <i class="bi bi-eye-fill"></i></button> -->
-            <h2>Why shop from blinkit?</h2>
+            <h2>Why shop from eshop?</h2>
+            <div>
+            <p><img src="../../assets/drinksimgsection/10_minute_delivery.png">
+              Superfast Delivery</p>
+             <p style="color: grey;"> Get your order delivered to your doorstep at the earliest from dark stores near you.</p>
+            </div>
+              <div>
+                <p><img src="../../assets/drinksimgsection/Best_Prices_Offers.png"> Best Prices & Offers</p>
+                <p style="color: grey;"> Best price destination with offers directly from the manufacturers.</p>
+                </div>
+                <div>
+                  <p><img src="../../assets/drinksimgsection/Wide_Assortment.png">    Wide Assortment</p>
+                  <p style="color: gray;">Choose from 5000+ products across food, personal care, household & other categories.</p>
+                </div>
           </div>
         </div>
       </div>
