@@ -5,6 +5,10 @@
     border-radius: 14px;
 }
 
+.logo-img:hover{
+    cursor: pointer;
+}
+
 input {
     border        : none;
     /* text-align : center; */
