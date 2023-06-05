@@ -9,16 +9,16 @@ import { ProductService } from '../product.service';
 })
 export class HeaderComponent {
   nameSearch: string = '';
-  cartCountItem: number = 0;
+  cartCountItem: any;
   constructor(private router: Router, private productService: ProductService) {
 
   }
 
   ngOnInit() {
     this.productService.mycartproduct.subscribe((cartpro: any) => {
-      console.log('ghgffh', cartpro)
-      this.cartCountItem = cartpro;
+      this.cartCountItem = cartpro.length
     })
+
   }
   gotoHome() {
     this.router.navigate([''])

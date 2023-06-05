@@ -9,12 +9,13 @@ import { ProductService } from '../product.service';
 })
 export class ProdetailsComponent {
  procardetai:any =[];
+ mycartproduct:any=[]
   constructor(private router: ActivatedRoute, private productService: ProductService){}
 
   ngOnInit(){
     var params:any = this.router.params;
     var id: any = params.value.id;
-    this.procardetai = this.productService.getproductDetails(id);
+    this.procardetai = this.productService.mycartproduct;
   }
 
 }

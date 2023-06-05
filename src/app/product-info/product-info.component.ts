@@ -15,23 +15,19 @@ export class ProductInfoComponent {
   productList: any = [];
   selectId: any;
   quantity = 0;
+  cartItem: any[] = [];
   constructor(private route: ActivatedRoute, private productService: ProductService) {
-    // this.productService.mycartproduct.subscribe((cartpro:any) =>{
-    //   console.log(cartpro)
-    //   this.mycartprod = cartpro
-    // })
+
   }
 
   ngOnInit() {
     this.route.queryParamMap.subscribe(param => {
-      console.log(param.get('id'))
       this.selectId = param.get('id')
 
     })
 
     this.productList = Data.find(r => r['id'] === this.selectId)
 
-    console.log(this.productList)
 
     // this.Drinkssection = [
     //   {
@@ -312,9 +308,14 @@ export class ProductInfoComponent {
   }
   subtracpro(i: any) {
 
-    console.log(i)
     if (this.productList['subcat'][0]['data'][i]['cartCount'] > 0) {
       this.productList['subcat'][0]['data'][i]['cartCount'] = this.productList['subcat'][0]['data'][i]['cartCount'] - 1
+    }
+    else {
+      console.log("cg")
+      this.cartItem = this.cartItem.filter(r => r['cartCount'] > 0)
+      this.productService.mycartproduct.next(this.cartItem)
+
     }
 
     // console.log(info)
@@ -323,18 +324,21 @@ export class ProductInfoComponent {
     // }
   }
   addpro(i: number) {
-    console.log(i)
-    let cartpro = this.productList['subcat'][0]['data'][i]['cartCount'] = this.productList['subcat'][0]['data'][i]['cartCount'] + 1;
-    console.log(this.productList['subcat'][0]['data'])
+    this.productList['subcat'][0]['data'][i]['cartCount'] = this.productList['subcat'][0]['data'][i]['cartCount'] + 1;
+    const cartpro = this.productList['subcat'][0]['data'][i]
+    let index = this.cartItem.findIndex(r => r['name'] === cartpro['name'] && r['id'] === cartpro['id'])
+    if (index === -1) {
+      this.cartItem.push(cartpro)
+    }
+    else {
+      this.cartItem[index] = cartpro
+    }
 
-    this.productService.mycartproduct.next(this.productList['subcat'][0]['data'])
+    this.cartItem = this.cartItem.filter(r => r['cartCount'] > 0)
+    console.log(this.cartItem)
+    this.productService.mycartproduct.next(this.cartItem)
   }
-  mycartprod(cartpro: any) {
-    console.log(cartpro);
 
-    // this.mycartproduct = cartpro.value
-    // this.productService.mycartproduct.next(cartpro)
-  }
 
 }
 

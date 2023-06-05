@@ -9,16 +9,16 @@ import { ProductService } from '../product.service';
 })
 export class MycartComponent {
 
-  cartCountItem: any;
+  cartItem: any[] = [];
   constructor(private router: ActivatedRoute, private productService: ProductService) {
 
   }
 
   ngOnInit() {
     this.productService.mycartproduct.subscribe((cartpro: any) => {
-      console.log('abcd', cartpro)
-      this.cartCountItem = cartpro;
+      this.cartItem = cartpro;
     })
+
   }
   // ClickMe(){
   //   console.log("ehhh")

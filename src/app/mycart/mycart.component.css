@@ -1,9 +1,36 @@
-.h3{
-margin-top: 10%;
+.h3 {
+    margin-top: 10%;
 }
-.img{
-    width: 10%;
-    height: 40%;
-    align-items: center;
-    margin-left: 0;
+
+img {
+    width         : 88px;
+    height        : 88px;
+    mix-blend-mode: multiply;
+
+}
+
+
+.item-name {
+    width        : 180px;
+    white-space  : nowrap;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-item {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-around;
+    width          : 28vw;
+}
+
+.cart-item:hover {
+    background-color: rgb(224, 216, 216);
+}
+
+.cart-count {
+    padding         : 9px 14px;
+    background-color: lightgreen;
+    border-radius   : 50%;
+    color           : white;
 }

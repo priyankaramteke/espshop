@@ -1,5 +1,19 @@
-<h1>{{cartCountItem}}</h1>
+<div *ngFor="let folder of cartItem" class="cart-item">
+    <div>
+        <img [src]="folder['img']" alt="" srcset="">
+    </div>
+    <div>
+        <div class="item-name">{{folder.name}}</div>
+        <div>{{folder['quantity']}}</div>
+        <div>{{folder['price'] }}</div>
+    </div>
+    <div>
+        <span class="cart-count">{{folder['cartCount']}}</span>
+    </div>
+</div>
+
+
+
 <div>
-    <img src="../../assets/drinksimgsection/mycart.png">
     <h4>You don't have any items in your cart</h4>
 </div>
