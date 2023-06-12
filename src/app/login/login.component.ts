@@ -12,6 +12,7 @@ export class LoginComponent {
   registerform: any = FormGroup;
   Signin: Boolean = false;
   isLogin = true;
+  userdata:any=[];
 
   constructor(private formbuilder: FormBuilder) { }
   ngOnInit() {
@@ -26,7 +27,7 @@ export class LoginComponent {
       email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),
     })
-     
+     this.userdata =JSON.parse(localStorage['userdata'] || [])
   }
   get f() {
     return this.loginform.controls
@@ -34,8 +35,8 @@ export class LoginComponent {
   metadata: any = ''
 
   submit() {
-    console.log(this.loginform)
-    console.log(this.registerform)
+    // console.log(this.loginform.value)
+    console.log(this.registerform.value)
     this.Signin = true;
     if (this.loginform.valid) {
       this.metadata = {
@@ -43,7 +44,7 @@ export class LoginComponent {
         email: this.loginform.value.email,
         password: this.loginform.value.password,
       }
-      console.log(this.loginform.value)
+      
     }
   }
 
@@ -61,11 +62,18 @@ export class LoginComponent {
         email: this.registerform.value.email,
         password: this.registerform.value.password,
       }
+      this.userdata.push(this.valuedata)
+      localStorage.setItem('userdata', JSON.stringify(this.userdata))
+      console.log(this.registerform.value)
     }
    }
 
 
   registerHandler() {
     this.isLogin = !this.isLogin;
+  }
+  formreset(){
+    this.registerform.reset();
+    this.Signin = false;
   }
 }

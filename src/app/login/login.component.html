@@ -115,8 +115,11 @@
 
 
             <!-- Submit button -->
-            <button type="button" (click)="submit()" class="btn btn-primary btn-block mb-4">Submit</button>
-
+            <div class="d-flex justify-content-end ">
+            <button type="button" class="btn btn-light mb-4 mx-2" (click)="formreset()">Reset
+                all</button>
+            <button type="button" (click)=" Registerdata()" class="btn btn-primary btn-block mb-4 mx-2">Submit</button>
+            </div>
             <!-- login buttons -->
             <div class="text-center">
                 <p>Not a member? <span (click)="registerHandler()">Login</span> </p>
