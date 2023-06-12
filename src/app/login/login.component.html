@@ -1,12 +1,12 @@
 <div class="container">
-    <h1>Phone Number Verification</h1>
 
-    <div style="height: 50vh;width: 40vw;background-color: rgb(247, 243, 243);">
+    <div *ngIf="isLogin" style="height: 74vh;width: 40vw;background-color: rgb(247, 243, 243);">
+        <h1>Phone Number Verification</h1>
         <h3>Enter your phone number to
             Login/Sign up</h3>
         <form [formGroup]="loginform">
 
-            <div class="form-group mb-4">
+            <div class="form-group mb-4 ">
                 <!-- <label class="form-label" for="form2Example1">Email address</label> -->
                 <input type="email" class="form-control" required formControlName="email"
                     [ngClass]="{'is-invalid':Signin && f['email'].errors}" placeholder="Email address" />
@@ -26,7 +26,7 @@
             </div>
 
             <!-- 2 column grid layout for inline styling -->
-            <div class="row mb-4">
+            <div class="row mb-3">
                 <div class="col d-flex justify-content-center">
                     <!-- Checkbox -->
                     <div class="form-check">
@@ -35,6 +35,10 @@
                     </div>
                 </div>
 
+
+                
+
+
                 <div class="col">
                     <!-- Simple link -->
                     <a href="#!">Forgot password?</a>
@@ -42,11 +46,11 @@
             </div>
 
             <!-- Submit button -->
-            <button type="button" (click)="submit()" class="btn btn-primary btn-block mb-4">Sign in</button>
+            <button type="button" (click)="submit()" class="btn btn-primary btn-block mb-1">Sign in</button>
 
             <!-- Register buttons -->
-            <div class="text-center">
-                <p>Not a member? <a href="#!">Register</a></p>
+            <div class="text-center mb-4">
+                <p>Not a member? <span (click)="registerHandler()">Register</span></p>
                 <p>or sign up with:</p>
                 <button type="button" class="btn btn-link btn-floating mx-1">
                     <i class="bi bi-facebook"></i>
@@ -63,6 +67,61 @@
                 <button type="button" class="btn btn-link btn-floating mx-1">
                     <i class="bi bi-github"></i>
                 </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- registraion -->
+    <div *ngIf="!isLogin" style="height: 74vh;width: 40vw;background-color: rgb(214, 210, 210);">
+
+        <h1>Register</h1>
+        <form [formGroup]="registerform">
+
+            <div class="form-group mb-3">
+                <input type="text" name="name" id="name" class="form-control" required formControlName="name"
+                    [ngClass]="{'is-invalid':Signin && b['name'].errors}" placeholder="Name">
+                <div *ngIf="Signin && b['name'].errors" class="invalid-feedback">
+                    <div *ngIf="b['name'].errors['required']">Nmae is required</div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <input type="number" name="mob" class="form-control" required formControlName="mob"
+                    [ngClass]="{'is-invalid':Signin && b['mob'].errors}" placeholder="mobile">
+                <div *ngIf="Signin && b['mob'].errors" class="invalid-feedback">
+                    <div *ngIf="b['mob'].errors['required']">Mobile Number is required</div>
+                </div>
+            </div>
+
+
+            <div class="form-group mb-4">
+                <input type="email" class="form-control" required formControlName="email"
+                    [ngClass]="{'is-invalid':Signin && b['email'].errors}" placeholder="Email address" />
+                <div *ngIf="Signin && b['email'].errors" class="invalid-feedback">
+                    <div *ngIf="b['email'].errors['required']">Email is required</div>
+                </div>
+            </div>
+
+
+            <div class="form-group mb-4">
+
+                <input type="password" class="form-control" required formControlName="password"
+                    [ngClass]="{'is-invalid':Signin && b['password'].errors}" placeholder="Password" />
+                <div *ngIf="Signin && b['password'].errors" class="invalid-feedback">
+                    <div *ngIf="b['password'].errors['required']">Password is required</div>
+                </div>
+            </div>
+
+
+
+            <!-- Submit button -->
+            <button type="button" (click)="submit()" class="btn btn-primary btn-block mb-4">Submit</button>
+
+            <!-- login buttons -->
+            <div class="text-center">
+                <p>Not a member? <span (click)="registerHandler()">Login</span> </p>
+
+
             </div>
         </form>
     </div>
