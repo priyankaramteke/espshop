@@ -12,9 +12,6 @@ export class HomeComponent {
   constructor() { }
 
   ngOnInit() {
-
-
-
     this.product = [
       {
         name: 'pet-care',
@@ -50,3 +47,6 @@ export class HomeComponent {
     console.log(this.product)
   }
 }
+
+
+
